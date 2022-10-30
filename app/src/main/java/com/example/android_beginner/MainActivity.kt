@@ -14,14 +14,20 @@ class MainActivity : AppCompatActivity() {
         )
         val rollButton: Button = findViewById(R.id.roll_button)
 
-
-        rollButton.setOnClickListener{ rollDice() }
+        rollButton.setOnClickListener{
+            rollDice()
+            showToast()
+        }
     }
 
     private fun rollDice() {
+        val randomInt = (1..6).random()
         val resultText: TextView = findViewById(R.id.result_text)
-        resultText.text = "Dice Rolled!"
-//        Toast.makeText(this, "onClickedRoll",
-//            Toast.LENGTH_SHORT).show()
+        resultText.text = randomInt.toString()
+    }
+
+    private  fun showToast() {
+            Toast.makeText(this, "onClickedRoll",
+            Toast.LENGTH_SHORT).show()
     }
 }
