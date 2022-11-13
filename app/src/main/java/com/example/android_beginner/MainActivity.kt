@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.Toolbar
 
 class MainActivity : AppCompatActivity() {
     lateinit var diceImage : ImageView
